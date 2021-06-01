@@ -32,6 +32,8 @@ class Game:
                 # Fight
                 fight = Fight(self.character, self.enemy)
                 fight.start()
+
+                # Test
                 self.ui.character_details(self.character)
             elif res == "b" or res == "B":
                 print("hi")
