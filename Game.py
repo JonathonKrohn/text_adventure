@@ -6,7 +6,7 @@ import random
 
 
 class Game:
-    CONST_names = ["Joe Schmoe", "Wooly Willie", "Billy Bob"]
+    names = ["Joe Schmoe", "Wooly Willie", "Billy Bob"]
 
     def __init__(self):
         # UI
@@ -16,7 +16,7 @@ class Game:
         self.character = Character(name, 100, 0, 0, 10, False)
         # enemy
         self.enemy = Enemy(
-            random.choice(self.CONST_names),
+            random.choice(self.names),
             30,
             0,
             0,
