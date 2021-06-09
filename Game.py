@@ -34,11 +34,11 @@ class Game:
                 if self.character.is_dead():
                     UI.game_over()
                     playing = False
-                else:
-                    UI.character_details(self.character)
             elif res == "b" or res == "B":
-                print("Open Shop (Under Construction)")
+                UI.shop_menu()
             elif res == "c" or res == "C":
+                UI.character_details(self.character)
+            elif res == "d" or res == "D":
                 playing = False
             else:
                 print("error")

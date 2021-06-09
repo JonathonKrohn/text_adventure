@@ -13,11 +13,12 @@ class UI:
     @staticmethod
     def display_menu():
         res = ""
-        while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "C"):
-            print("Please choose from the following options:\n")
+        while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "C" or res == "d" or res == "D"):
+            print("\n\n\nPlease choose from the following options:\n")
             print("a - Fight next enemy")
             print("b - Go to shop")
-            print("c - Exit game")
+            print("c - Check your character")
+            print("d - Exit game")
             res = input("?: ")
         return res
 
@@ -25,16 +26,16 @@ class UI:
     def get_name():
         name = input("\nPlease name your character: ")
         name = name.upper()
-        print("\nHello " + name + "!\n")
+        print("\nHello " + name + "!")
         return name
 
     @staticmethod
     def character_details(character: Character):
-        print("Your health is {}".format(character.health))
+        print("\nYour health is {}".format(character.health))
 
     @staticmethod
     def game_over():
-        print("GAME OVER")
+        print("\nGAME OVER")
         print("Created by Jonathon Krohn :) and maybe Samuel Krohn")
 
     # endregion
@@ -46,7 +47,7 @@ class UI:
         res = ""
 
         while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "c"):
-            print("\nPlease choose from the following options:\n")
+            print("\n\n\nPlease choose from the following options:\n")
             print("a - Attack")
             print("b - Use Potion")
             print("c - Check Health")
@@ -55,27 +56,35 @@ class UI:
 
     @staticmethod
     def attack():
-        print("You swing your sword!")
+        print("\nYou swing your sword!")
 
     @staticmethod
     def drink_potion():
-        print("You drink a potion!")
+        print("\nYou drink a potion!")
 
     @staticmethod
     def no_potion():
-        print("You do not own a potion, silly goose!")
+        print("\nYou do not own a potion, silly goose!")
 
     @staticmethod
     def display_fight_stats(character: Character, enemy: Enemy):
-        print("Your health is {} and their health is {}".format(character.health, enemy.health))
+        print("\nYour health is {} and their health is {}".format(character.health, enemy.health))
 
     @staticmethod
     def you_are_dead():
-        print("Wow, that's rough. You died.")
+        print("\nWow, that's rough. You died.")
 
     @staticmethod
     def you_killed_enemy():
-        print("Your foe has fallen, YOU WIN!")
+        print("\nYour foe has fallen, YOU WIN!")
+
+    # endregion
+    #####################################################
+    # region Shop Class
+
+    @staticmethod
+    def shop_menu():
+        print("\nOpen Shop (Under Construction)")
 
     # endregion
     #####################################################
