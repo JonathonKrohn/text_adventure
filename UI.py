@@ -38,4 +38,10 @@ class UI:
 
     @staticmethod
     def character_details(character: Character):
-        print(character.health)
+        print("Your health is " + character.health)
+
+    @staticmethod
+    def game_over():
+        print("GAME OVER")
+        print("Created by Jonathon Krohn :) and maybe Samuel Krohn")
+

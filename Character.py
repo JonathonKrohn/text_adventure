@@ -10,3 +10,4 @@ class Character(Person):
     def drink_potion(self):
         self.health += 50
         self.has_potion = False
+

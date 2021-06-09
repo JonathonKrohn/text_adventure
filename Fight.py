@@ -35,13 +35,14 @@ class Fight:
                 self.heal()
             elif response == "c" or response == "C":
                 UI.display_fight_stats(self.character, self.enemy)
-
-            if self.enemy.health <= 0:
-                print("Your foe has fallen, YOU WIN!")
-                fighting = False
-            elif self.character.health <= 0:
+            if self.character.is_dead():
                 print("Wow, that's rough. You died.")
                 fighting = False
+            elif self.enemy.is_dead():
+                print("Your foe has fallen, YOU WIN!")
+                fighting = False
+
+
 
 
 
