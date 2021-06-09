@@ -6,17 +6,16 @@ import random
 
 
 class Game:
-    CONST_names = ["Joe Schmoe", "Wooly Willie", "Billy Bob"]
+    names = ["Joe Schmoe", "Wooly Willie", "Billy Bob"]
 
     def __init__(self):
         # UI
-        self.ui = UI()
-        name = self.ui.get_name()
+        name = UI.get_name()
         # character
         self.character = Character(name, 100, 0, 0, 10, False)
         # enemy
         self.enemy = Enemy(
-            random.choice(self.CONST_names),
+            random.choice(self.names),
             30,
             0,
             0,
@@ -27,14 +26,14 @@ class Game:
         playing = True
         while playing:
 
-            res = self.ui.display_menu()
+            res = UI.display_menu()
             if res == "a" or res == "A":
                 # Fight
                 fight = Fight(self.character, self.enemy)
                 fight.start()
 
                 # Test
-                self.ui.character_details(self.character)
+                UI.character_details(self.character)
             elif res == "b" or res == "B":
                 print("hi")
             elif res == "c" or res == "C":
