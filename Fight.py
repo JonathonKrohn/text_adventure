@@ -11,7 +11,7 @@ class Fight:
         self.enemy = enemy
 
     def attack(self):
-        print("You swing your sword!")
+        UI.attack()
         self.character.health -= self.enemy.attack
         self.enemy.health -= self.character.attack
 
@@ -19,9 +19,9 @@ class Fight:
         if self.character.has_potion:
             self.character.drink_potion()
             self.character.health -= self.enemy.attack
-
+            UI.drink_potion()
         else:
-            print("You do not own a potion, silly goose!")
+            UI.no_potion()
 
     def start(self):
         fighting = True
@@ -29,17 +29,20 @@ class Fight:
         while fighting:
             response = UI.fight_menu()
 
+            # Checks for user response
             if response == "a" or response == "A":
                 self.attack()
             elif response == "b" or response == "B":
                 self.heal()
             elif response == "c" or response == "C":
                 UI.display_fight_stats(self.character, self.enemy)
+
+            # Death check on player and enemy
             if self.character.is_dead():
-                print("Wow, that's rough. You died.")
+                UI.you_are_dead()
                 fighting = False
             elif self.enemy.is_dead():
-                print("Your foe has fallen, YOU WIN!")
+                UI.you_killed_enemy()
                 fighting = False
 
 

@@ -1,8 +1,8 @@
+import random
 from Character import Character
 from Enemy import Enemy
 from Fight import Fight
 from UI import UI
-import random
 
 
 class Game:
@@ -40,6 +40,5 @@ class Game:
                 print("Open Shop (Under Construction)")
             elif res == "c" or res == "C":
                 playing = False
-
             else:
                 print("error")
