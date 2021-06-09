@@ -31,11 +31,13 @@ class Game:
                 # Fight
                 fight = Fight(self.character, self.enemy)
                 fight.start()
-
-                # Test
-                UI.character_details(self.character)
+                if self.character.is_dead():
+                    UI.game_over()
+                    playing = False
+                else:
+                    UI.character_details(self.character)
             elif res == "b" or res == "B":
-                print("hi")
+                print("Open Shop (Under Construction)")
             elif res == "c" or res == "C":
                 playing = False
 

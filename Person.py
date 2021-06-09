@@ -7,3 +7,9 @@ class Person:
         self.exp = exp
         self.coins = coins
         self.attack = attack
+
+    def is_dead(self):
+        if self.health <= 0:
+            return True
+        else:
+            return False
