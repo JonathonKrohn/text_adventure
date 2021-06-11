@@ -46,7 +46,7 @@ class UI:
     def fight_menu():
         res = ""
 
-        while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "c"):
+        while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "C"):
             print("\n\n\nPlease choose from the following options:\n")
             print("a - Attack")
             print("b - Use Potion")
@@ -84,7 +84,15 @@ class UI:
 
     @staticmethod
     def shop_menu():
-        print("\nOpen Shop (Under Construction)")
+        res = ""
+
+        while not (res == "a" or res == "A" or res == "b" or res == "B"):
+            print("\n\n\nWould you like to purchase a health potion? (50 HP)\n")
+            print("a - YES (3 coins)")
+            print("b - NO")
+            res = input("?: ")
+        return res
+
 
     # endregion
     #####################################################
