@@ -13,7 +13,7 @@ class Game:
         # UI
         name = UI.get_name()
         # character
-        self.character = Character(name, 100, 100, 100, 10, True)
+        self.character = Character(name, 100, 100, 100, 10, False)
         # enemy
         self.enemy = Enemy(
             random.choice(self.names),
