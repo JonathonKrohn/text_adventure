@@ -2,6 +2,7 @@ from Character import Character
 from Enemy import Enemy
 
 
+
 class UI:
 
     def __init__(self):
@@ -36,19 +37,19 @@ class UI:
     @staticmethod
     def game_over():
         print("\nGAME OVER")
-        print("Created by Jonathon Krohn :) and maybe Samuel Krohn")
+        print("Created by Jonathon Krohn :) and maybe Samuel Krohn ;)")
 
     # endregion
     #####################################################
     # region Fight Class
 
     @staticmethod
-    def fight_menu():
+    def fight_menu(enemy: Enemy):
         res = ""
 
         while not (res == "a" or res == "A" or res == "b" or res == "B" or res == "c" or res == "C"):
             print("\n\n\nPlease choose from the following options:\n")
-            print("a - Attack")
+            print("a - Attack " + enemy.name)
             print("b - Use Potion")
             print("c - Check Health")
             res = input("?: ")
@@ -59,8 +60,9 @@ class UI:
         print("\nYou swing your sword!")
 
     @staticmethod
-    def drink_potion():
+    def drink_potion(character: Character):
         print("\nYou drink a potion!")
+        print("Your health is now: {}".format(character.health))
 
     @staticmethod
     def no_potion():

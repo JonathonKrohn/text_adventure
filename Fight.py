@@ -19,7 +19,7 @@ class Fight:
         if self.character.has_potion:
             self.character.drink_potion()
             self.character.health -= self.enemy.attack
-            UI.drink_potion()
+            UI.drink_potion(self.character)
         else:
             UI.no_potion()
 
@@ -27,7 +27,7 @@ class Fight:
         fighting = True
 
         while fighting:
-            response = UI.fight_menu()
+            response = UI.fight_menu(self.enemy)
 
             # Checks for user response
             if response == "a" or response == "A":

@@ -7,13 +7,13 @@ from Shop import Shop
 
 
 class Game:
-    names = ["Joe Schmoe", "Wooly Willie", "Billy Bob"]
+    names = ["Joe Schmoe", "Wooly Willie", "Billy Bob", "Bowser Shmowser", "Missi Krissi", "Captain Obvious", "Hook-hand Dan"]
 
     def __init__(self):
         # UI
         name = UI.get_name()
         # character
-        self.character = Character(name, 100, 100, 100, 10, False)
+        self.character = Character(name, 100, 100, 100, 10, True)
         # enemy
         self.enemy = Enemy(
             random.choice(self.names),
