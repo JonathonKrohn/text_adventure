@@ -4,7 +4,7 @@ from Enemy import Enemy
 from Fight import Fight
 from UI import UI
 from Shop import Shop
-
+# I, Jonathon, am a dummy that put two github repos in one file.
 
 class Game:
     names = ["Joe Schmoe", "Wooly Willie", "Billy Bob", "Bowser Shmowser", "Missi Krissi", "Captain Obvious", "Hook-hand Dan"]
